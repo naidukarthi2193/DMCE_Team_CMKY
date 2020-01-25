@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Adamina&display=swap" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0%; padding: 0%;  font-family: 'Adamina', serif;
+
+
+      }
+      .scroll {
+
+  overflow-x:scroll; 
+}
+
+    </style>
+    
+    
+    
+</head>
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">CODE CMKY</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon bg-dark"></span>
+   </button>
+   
+  </div>
+  </nav>
+</header>
+<body >
+  <div class="container">
+    <div class="container-fluid">
+    <span class="border ">
+     <form  class="container form-horizontal" action="http://localhost:5000/handle_data" method="POST">
+      
+        <!-- <div class="form-row"> -->
+            <div class="form-group col-sm-12 ">
+                <label class="control-label col-sm-4" for="name">User ID/Adhaar Number</label>
+                <input type="text" class="form-control" id="venue" placeholder="uid" name="UID">
+              </div>
+            <!-- </div> -->
+     <div class="form-row">
+     <div class="form-group col-sm-6 ">
+         <label class="control-label col-sm-4" for="name">Name </label>
+           <input type="text" class="form-control" id="name" placeholder="Enter name of occupant">
+       </div>
+         
+       <div class="form-group col-sm-6">
+         <label class="control-label col-sm-4" for="email">Village</label>
+           <input type="email" class="form-control" id="email" placeholder="Enter village">  
+       </div>
+     </div>
+   
+     <div class="form-row">
+       <div class="form-group col-sm-6">
+         <label class="control-label col-sm-4" for="en">Taluka</label>
+             <input type="text" class="form-control" id="en" placeholder="Enter Taluka">
+       </div>
+       <div class="form-group col-sm-6">
+        <label class="control-label col-sm-4" for="en">Field name</label>
+            <input type="text" class="form-control" id="en" placeholder="Enter local name of field">
+      </div>
+   
+        
+       </div>
+   
+       <div class="form-group">
+        <label class="control-label col-sm-2" for="desc">Cultivable Area</label>
+        
+          <!-- <input type="text" class="form-control" id="desc" placeholder="Enter Event Description"> -->
+          <textarea class="form-control" rows="2"></textarea>
+        </textarea>
+      </div>
+      <div class="form-group">
+        <!-- <label class="control-label col-sm-2" for="venue">Total</label> -->
+        <label class="control-label col-sm-2" for="desc">Total Area</label>
+          <input type="text" class="form-control" id="venue" placeholder="Total " name="area">
+      </div>
+         
+         <div class="form-group">
+            <label class="control-label col-sm-2" for="desc">Pot-Kharab</label>
+            
+              <!-- <input type="text" class="form-control" id="desc" placeholder="Enter Event Description"> -->
+              <textarea class="form-control" rows="2"></textarea>
+            </textarea>
+          </div>
+          <div class="form-group">
+            <!-- <label class="control-label col-sm-2" for="venue">Total</label> -->
+              <input type="text" class="form-control" id="venue" placeholder="Total (Class a and b)">
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="desc">Assessment</label>
+            
+              <!-- <input type="text" class="form-control" id="desc" placeholder="Enter Event Description"> -->
+              <textarea class="form-control" rows="2"></textarea>
+            </textarea>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-6" for="desc">Boundary and Survey marks</label>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-sm-3">
+              <!--  <label class="control-label col-sm-4" for="en">Top</label> --> 
+                  <input type="text" class="form-control" id="en" name="toplandmark" placeholder="Enter Top landmark">
+            </div>
+            <div class="form-group col-sm-3">
+             <!-- <label class="control-label col-sm-4" for="en">Bottom</label> -->
+                 <input type="text" class="form-control" id="en" name="bottomlandmark" placeholder="Enter Bottom landmark">
+           </div>
+           <div class="form-group col-sm-3">
+            <!--  <label class="control-label col-sm-4" for="en">Left</label> --> 
+                <input type="text" class="form-control" id="en" name="leftlandmark" placeholder="Enter Left landmark">
+          </div>
+          <div class="form-group col-sm-3">
+           <!-- <label class="control-label col-sm-4" for="en">Right</label> -->
+               <input type="text" class="form-control" id="en" name="rightlandmark" placeholder="Enter Right landmark">
+         </div>
+           </div>
+           <div class="form-row">
+           <div class="form-group col-sm-6">
+            <label class="control-label col-sm-2" for="desc">Year</label>
+            
+              
+              <textarea class="form-control" rows="3"></textarea>
+            </textarea>
+          </div>
+          <div class="form-group col-sm-6">
+            <label class="control-label col-sm-2" for="desc">Session</label>
+            
+              
+              <textarea class="form-control" rows="3"></textarea>
+            </textarea>
+          </div>
+          </div>
+          <div class="form-row">
+            <label class="control-label col-sm-6" for="desc">Details of cropped Area</label>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-6" for="desc">Mixed crop areas</label>
+          </div>
+          <!-- <div class="form-row"> -->
+            <div class="form-row">
+            <div class="form-group col-sm-4">
+              <!--  <label class="control-label col-sm-4" for="en">Top</label> --> 
+                  <input type="text" class="form-control" id="en" placeholder="Code name of mixture">
+            </div>
+            <div class="form-group col-sm-4">
+             <!-- <label class="control-label col-sm-4" for="en">Bottom</label> -->
+                 <input type="text" class="form-control" id="en" placeholder="Irrigated">
+           </div>
+           <div class="form-group col-sm-4">
+            <!--  <label class="control-label col-sm-4" for="en">Left</label> --> 
+                <input type="text" class="form-control" id="en" placeholder="Unirrigated">
+          </div>
+         </div>
+          <div class="form-group">
+            <label class="control-label col-sm-12" for="desc">Constituent crops with</label>
+          </div>
+          <div class="form-row">
+          <div class="form-group col-sm-4">
+            <!--  <label class="control-label col-sm-4" for="en">Left</label> --> 
+                <input type="text" class="form-control" id="en" placeholder="Name of crop">
+          </div>
+          <div class="form-group col-sm-4">
+            <!--  <label class="control-label col-sm-4" for="en">Left</label> --> 
+                <input type="text" class="form-control" id="en" placeholder="Irrigated">
+          </div>
+          <div class="form-group col-sm-4">
+            <!--  <label class="control-label col-sm-4" for="en">Left</label> --> 
+                <input type="text" class="form-control" id="en" placeholder="Unirrigated">
+          </div>
+           </div>
+           <div class="form-group">
+            <label class="control-label col-sm-12" for="desc">Pure crops area</label>
+          </div>
+          <div class="form-row">
+          <div class="form-group col-sm-4">
+            <!--  <label class="control-label col-sm-4" for="en">Left</label> --> 
+                <input type="text" class="form-control" id="en" placeholder="Name of crop">
+          </div>
+          <div class="form-group col-sm-4">
+            <!--  <label class="control-label col-sm-4" for="en">Left</label> --> 
+                <input type="text" class="form-control" id="en" placeholder="Irrigated">
+          </div>
+          <div class="form-group col-sm-4">
+            <!--  <label class="control-label col-sm-4" for="en">Left</label> --> 
+                <input type="text" class="form-control" id="en" placeholder="Unirrigated">
+          </div>
+           </div>
+           <div class="form-row">
+            <div class="form-group"> 
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-dark border-dark">Submit</button>
+              </div>
+            </div>
+            </div>
+
+    </form>
+   
+
+       
+      
+     </span>
+       </span>
+       </div>
+       </div>
+   </body>
