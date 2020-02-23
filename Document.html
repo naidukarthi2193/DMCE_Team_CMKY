@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://localhost:5000/handle_data -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Document_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Document_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./Document_files/style.css">
+    <link href="./Document_files/css" rel="stylesheet">
+    
+    <script src="./Document_files/jquery-3.3.1.slim.min.js.download" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="./Document_files/popper.min.js.download" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="./Document_files/bootstrap.min.js.download" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0%; padding: 0%;  font-family: 'Adamina', serif;
+
+
+      }
+      .scroll {
+
+  overflow-x:scroll; 
+}
+
+    </style>
+    
+   <script>
+       function myfunction()
+       {
+           var region=document.getElementById("region");
+           var temp=document.getElementById("temp");
+           var humid=document.getElementById("humid");
+           var nitrogen=document.getElementById("v1");
+           var phosphorous=document.getElementById("v2");
+           var zinc=document.getElementById("v3");
+           var iron=document.getElementById("v4");
+           var wheat=document.getElementById("s1");
+           var cotton=document.getElementById("s2");
+           var jawar=document.getElementById("s3");
+           var rice=document.getElementById("s4");
+           var sugar=document.getElementById("s5");
+           alert(region);
+
+       }
+   </script> 
+    
+</head>
+<!-- NAVBAR -->
+<body data-gr-c-s-loaded="true" cz-shortcut-listen="true"><header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top mb-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="http://localhost:5000/handle_data#">CODE CMKY</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon bg-dark"></span>
+   </button>
+   
+  </div>
+  </nav>
+</header>
+
+    
+<div class="container-flex px-5 py-5">
+    <h2><p class="font-weight-bold">Previous records</p></h2>
+<table class="table border">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Year</th>
+        <th scope="col">Season</th>
+        <th scope="col">Crop Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>2018</td>
+        <td>Kharif</td>
+        <td>Wheat</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>2017</td>
+        <td>Rabi</td>
+        <td>Jawar</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>2016</td>
+        <td>Spring</td>
+        <td>Sugarcane</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2><p class="my-3 py-3 font-weight-bold">Current Reports</p></h2>
+  <div class="form-row">
+    <div class="form-group col-sm-6 ">
+    <h4><label class="font-weight-bold dark control-label col-sm-2" for="desc">Region</label></h4> 
+     
+       
+    <textarea class="form-control" rows="1">Ambala</textarea>
+   </div>
+   <div class="form-group col-sm-6">
+   <h4><label class="font-weight-bold dark control-label col-sm-2" for="desc">Season</label></h4>  
+     
+       
+       <textarea class="form-control" rows="1">Kharif</textarea>
+     
+   </div>
+   </div>
+   <h2><p class="my-3 py-3 font-weight-bold">Environmental Conditions</p></h2>
+  <div class="form-row">
+    <div class="form-group col-sm-6 ">
+    <h4><label class="font-weight-bold dark control-label col-sm-2" for="desc" id="temp">Temperature</label></h4> 
+     
+       
+       <textarea class="form-control" rows="1">25 degree C</textarea>
+     
+   </div>
+   <div class="form-group col-sm-6">
+   <h4><label class="font-weight-bold dark control-label col-sm-2" for="desc" id="humid">Humidity</label></h4>  
+     
+       
+       <textarea class="form-control" rows="1">60%</textarea>
+     
+   </div>
+   </div>
+   <table class="table border">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Deficient Materials in Soil</th>
+        <th scope="col">value</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Avaliable Nitrogen (N)</td>
+        <td id="v1">value</td>
+    </tr>
+     <tr>
+        <th scope="row">2</th>
+        <td>Avaliable Phosphorous (P)</td>
+        <td id="v2">value</td>
+    </tr>
+    <tr>
+        <th scope="row">3</th>
+        <td>Avaliable Zinc (Zn)</td>
+        <td id="v3">value</td>
+     </tr>
+     <tr>
+        <th scope="row">4</th>
+        <td>Avaliable Iron (Fe)</td>
+        <td id="v4">value</td>
+    </tr>
+    
+    </tbody>
+  </table>
+    
+  
+    <table class="table border align-center">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Environmental Variables</th>
+        <th scope="col" class="pr-4">Suitability</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Wheat</td>
+        <td id="s1">Yes</td>
+    </tr>
+     <tr>
+        <th scope="row">2</th>
+        <td>Cotton</td>
+        <td id="s2">Yes</td>
+    </tr>
+    <tr>
+        <th scope="row">3</th>
+         <td>Jawar</td>
+         <td id="s3">No</td>
+     </tr>
+     <tr>
+        <th scope="row">4</th>
+        <td>Rice</td>
+        <td id="s4">No</td>
+    </tr>
+    <tr>
+        <th scope="row">5</th>
+         <td>Sugarcane</td>
+         <td id="s5">Yes</td>
+     </tr>
+    </tbody>
+  </table>
+  <div class="form-row">
+    <div class="form-group"> 
+      <div class="col-sm-offset-2 col-sm-10">
+      <a href="http://localhost:5000/final_result">  <button type="button" class="btn btn-dark border-dark" onclick="myfunction();">Submit</button>
+      </a></div><a href="http://localhost:5000/final_result">
+    </a></div><a href="http://localhost:5000/final_result">
+    </a></div><a href="http://localhost:5000/final_result">
+  </a></div><a href="http://localhost:5000/final_result">
+  <!-- <div class="container-flex px-5 py-5"> -->
+    
+  
+  
+  
+
+
+  
+</a><div id="fatkun-drop-panel">
+        <a id="fatkun-drop-panel-close-btn">×</a>
+            <div id="fatkun-drop-panel-inner">
+                <div class="fatkun-content">
+                    <svg class="fatkun-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5892"><path d="M494.933333 782.933333c2.133333 2.133333 4.266667 4.266667 8.533334 6.4h8.533333c6.4 0 10.666667-2.133333 14.933333-6.4l2.133334-2.133333 275.2-275.2c8.533333-8.533333 8.533333-21.333333 0-29.866667-8.533333-8.533333-21.333333-8.533333-29.866667 0L533.333333 716.8V128c0-12.8-8.533333-21.333333-21.333333-21.333333s-21.333333 8.533333-21.333333 21.333333v588.8L249.6 475.733333c-8.533333-8.533333-21.333333-8.533333-29.866667 0-8.533333 8.533333-8.533333 21.333333 0 29.866667l275.2 277.333333zM853.333333 874.666667H172.8c-12.8 0-21.333333 8.533333-21.333333 21.333333s8.533333 21.333333 21.333333 21.333333H853.333333c12.8 0 21.333333-8.533333 21.333334-21.333333s-10.666667-21.333333-21.333334-21.333333z" p-id="5893"></path></svg>
+                    <div class="fatkun-title">Drag and Drop</div>
+                    <div class="fatkun-desc">The image will be downloaded</div>
+                </div>
+            </div>
+    </div></body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>

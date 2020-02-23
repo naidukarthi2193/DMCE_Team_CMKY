@@ -4,7 +4,7 @@ from datetime import datetime
 import requests, json
 from pprint import pprint
 from statistics import mean 
-
+import pandas as pd
 import firebase_admin
 import google.cloud
 from firebase_admin import credentials, firestore
@@ -124,5 +124,11 @@ def final_result():
 
     print(image_url)
     return render_template('maps.html',image_url = image_url)
+
+@app.route('/crop_pred')
+def crop_pred():
+
+
+    return render_template('crop_pred.html')
 
 app.run(host='localhost', debug=True)
