@@ -198,17 +198,66 @@
         </div>
     </div>
 
+
+    <!-- Predictions  -->
+
+    <div class="container-fluid clearfix text-center  float-center border"
+        style="width:80%;margin-left:10%;margin-top:2%;margin-bottom:2%">
+        <h1 class="display-5 text-center">Crop Predictions</h1>
+        <div class="float-center " style="width:100%">
+            <table class="table  text-center
+            table-borderless lead ml-5">
+                <thead>
+                    <tr>
+
+                        <th scope="col">Name</th>
+                        <th scope="col">Estimated yield(Quintals)</th>
+                        <th scope="col">Estimated Cost(Rupees)</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Water Requirement</th>
+                        <!-- <th scope="col">Irrigation Requirement</th> -->
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sugarcane</td>
+                        <td>4314</td>
+                        <td>106094</td>
+                        <td>270</td>
+                        <td>1700</td>
+                        <!-- <td></td> -->
+                    </tr>
+                    <tr>
+                        <td>Cotton</td>
+                        <td>86.9</td>
+                        <td>402648</td>
+                        <td>180</td>
+                        <td>1000</td>
+                        <!-- <td></td> -->
+                    </tr>
+                    <tr>
+                        <td>Rice</td>
+                        <td>234</td>
+                        <td>375096</td>
+                        <td>95</td>
+                        <td>600</td>
+                        <!-- <td></td> -->
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
     <!-- Graphs -->
     <div class="container-fluid jumbotron clearfix p-5" style="height:70vh">
         <div class=" card good ml-3 mr-3 mt-3 float-left " style="width:45%">
             <div id="rain_jf">
             </div>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
+
         </div>
         <script>
             var graphs_population = {{ json_rain_jf | safe}};
@@ -219,12 +268,7 @@
         <div class=" card good ml-3 mr-3 mt-3 float-left " style="width:45%">
             <div id="rain_ijas">
             </div>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
+
         </div>
         <script>
             var graphs_population = {{ json_rain_ijas | safe}};
@@ -232,16 +276,11 @@
             Plotly.newPlot('rain_ijas', graphs_population, layout);
         </script>
     </div>
-    <div class="container-fluid  jumbotron clearfix p-5" style="height:70vh">
+    <div class="container-fluid   clearfix p-5" style="height:70vh">
         <div class=" card good ml-3 mr-3 mb-3 float-left " style="width:45%">
             <div id="rain_mam">
             </div>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
+
         </div>
         <script>
             var graphs_population = {{ json_rain_mam | safe}};
@@ -252,12 +291,7 @@
         <div class=" card good ml-3 mr-3 mb-3 float-left " style="width:45%">
             <div id="rain_ons">
             </div>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
+
         </div>
         <script>
             var graphs_population = {{ json_rain_ons | safe}};
@@ -269,43 +303,12 @@
 
 
     <!-- Production  -->
-    <div class="container-fluid clearfix w-100" style="height:70vh">
 
-        <div class=" card good m-5 float-left d-block " style="width:45%">
-            <div id="produce_sugar">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
-        </div>
-        <script>
-            var graphs_population = {{ json_produce_sugar | safe}};
-            var layout = { title: 'Sugarcane Production', xaxis: { title: 'Area' }, yaxis: { title: 'kg' } };
-            Plotly.newPlot('produce_sugar', graphs_population, layout);
-        </script>
-        <div class=" card good m-3 d-block float-left " style="width:45%">
-
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid clearfix" style="height:70vh">
-        <div class=" card good m-3 float-left " style="width:45%">
+    <div class="container-fluid jumbotron clearfix" style="height:70vh">
+        <div class=" card good ml-1 float-left " style="width:33%">
             <div id="produce_rice">
             </div>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
+
         </div>
         <script>
             var graphs_population = {{ json_produce_rice | safe}};
@@ -316,15 +319,10 @@
 
 
 
-        <div class=" card good m-3 float-right " style="width:45%">
+        <div class=" card good ml-1 float-left " style="width:33%">
             <div id="produce_cotton">
             </div>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
+
         </div>
         <script>
             var graphs_population = {{ json_produce_cotton | safe}};
@@ -333,7 +331,19 @@
         </script>
 
 
+        <div class=" card good ml-1 float-right d-block " style="width:33%">
+            <div id="produce_sugar">
+            </div>
 
+        </div>
+        <script>
+            var graphs_population = {{ json_produce_sugar | safe}};
+            var layout = { title: 'Sugarcane Production', xaxis: { title: 'Area' }, yaxis: { title: 'kg' } };
+            Plotly.newPlot('produce_sugar', graphs_population, layout);
+        </script>
+
+
+    </div>
 
 
 
