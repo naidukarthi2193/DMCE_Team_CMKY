@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>LCP 6</title>
     <link rel="stylesheet" href="{{url_for('static',filename='./bootstrap/css/bootstrap.min.css')}}">
+
     <!-- <link rel="icon" href="{{url_for('static',filename='./deep.png')}}" type="image/png" sizes="16x16"> -->
     <script src="{{url_for('static',filename='./bootstrap/js/bootstrap.min.js')}}"></script>
     <script src="{{url_for('static',filename='./js/plotly.js')}}"></script>
@@ -12,68 +14,327 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"
         integrity="sha256-caNcSA0LvOCX90PTuEbwl+V09xPMca13CJUasl+VCtk=" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="{{url_for('static',filename='./css/styles.css')}}"> -->
+    <link rel="stylesheet" href="{{url_for('static',filename='./css/styles.css')}}">
 </head>
-<body>
-    <h1>Crops</h1>
 
-    <div class="good" id="rain_jf">
-        <script>
-            var graphs_population = {{ json_rain_jf | safe}};
-            var layout = {  title: 'Rainfall in Jan-Feb from 1984-2018', xaxis: { title: 'Years' }, yaxis: { title: 'mm' } };
-            Plotly.newPlot('rain_jf', graphs_population, layout);
-        </script>
+<body>
+    <div class="container-fluid jumbotron clearfix">
+        <h1 class="text-black text-center lead display-3">Crops</h1>
+
+        <div class="container w-25 float-left text-center ml-5 border">
+            <div class="title w-100 text-left p-2">
+                <h1 class="display-5">Farmer details</h1>
+            </div>
+
+            <div>
+                <table class="table  text-left
+                table-borderless lead">
+                    <thead>
+                        <tr>
+
+                            <td scope="col">Name</td>
+                            <td scope="col">Sanjay sawant </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td>Address</td>
+                            <td>Kanpur</td>
+                        </tr>
+                        <tr>
+
+                            <td>Village</td>
+                            <td>Tuli</td>
+                        </tr>
+                        <tr>
+                            <td>Sub-District</td>
+                            <td>
+                                XXXX
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Block Name</td>
+                            <td>
+                                XXXX
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>District</td>
+                            <td>
+                                XXXX
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Aadhaar Number</td>
+                            <td>
+                                XXXX
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mobile No.</td>
+                            <td>
+                                XXXX-XXXX
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Gender: Male, Category: XXX-XXX</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+        <div class="container w-75 mt-3 ml-5 d-inline-block float-left text-center border">
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.4755497664796!2d73.02088395097668!3d19.042818057898735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3db5e2c85cd%3A0xef26c52d7d73816e!2sSIES%20Graduate%20School%20of%20Technology!5e0!3m2!1sen!2sin!4v1582427476450!5m2!1sen!2sin"
+                width="100%" height="520" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+        </div>
+
     </div>
 
-    <div class="good" id="rain_ijas">
+    <!-- Present Soils -->
+    <div class="container-fluid clearfix text-center  float-center border"
+        style="width:80%;margin-left:10%;margin-top:2%;margin-bottom:2%">
+        <h1 class="display-5 text-center">Present Soils</h1>
+        <div class="float-left ml-5" style="width:40%">
+            <table class="table  text-left
+            table-borderless lead ml-5">
+                <thead>
+                    <tr>
+
+                        <th scope="col">Parameter</th>
+                        <th scope="col">Test Value </th>
+                        <th scope="col">Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+                        <td>pH</td>
+                        <td>8.10</td>
+                        <td>Moderately Alkaline</td>
+                    </tr>
+                    <tr>
+
+                        <td>EC</td>
+                        <td>0.68</td>
+                        <td>Normal</td>
+                    </tr>
+                    <tr>
+                        <td>Organic Carbon(OC)</td>
+                        <td>0.12</td>
+                        <td>Very Low</td>
+                    </tr>
+                    <tr>
+                        <td>Available Nitrogen(N)</td>
+                        <td>222.60</td>
+                        <td>Low</td>
+                    </tr>
+                    <tr>
+                        <td>Available Phosphorous(P)</td>
+                        <td>4.05</td>
+                        <td>Very Low</td>
+                    </tr>
+                    <tr>
+                        <td>Available Potassium (K)</td>
+                        <td>749.95</td>
+                        <td>Very High</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="float-left ml-5" style="width:40%">
+            <table class="table ml-5 text-right
+            table-borderless lead">
+                <thead>
+                    <tr>
+
+                        <th scope="col">Parameter</th>
+                        <th scope="col">Test Value </th>
+                        <th scope="col">Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>Available Sulphur(S)</td>
+                        <td>14.00</td>
+                        <td>Sufficient</td>
+                    </tr>
+                    <tr>
+                        <td>Available Zinc(Zn)</td>
+                        <td>0.47</td>
+                        <td>Deficient</td>
+                    </tr>
+                    <tr>
+                        <td>Available Boron(B)</td>
+                        <td>2.15</td>
+                        <td>Sufficient</td>
+                    </tr>
+                    <tr>
+                        <td>Available Iron(Fe)</td>
+                        <td>3.50</td>
+                        <td>Deficient</td>
+                    </tr>
+                    <tr>
+                        <td>Available Manganese(Mn)</td>
+                        <td>5.20</td>
+                        <td>Sufficient</td>
+                    </tr>
+                    <tr>
+                        <td>Available Copper(Cu)</td>
+                        <td>0.21</td>
+                        <td>Sufficient</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <!-- Graphs -->
+    <div class="container-fluid jumbotron clearfix p-5" style="height:70vh">
+        <div class=" card good ml-3 mr-3 mt-3 float-left " style="width:45%">
+            <div id="rain_jf">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <script>
+            var graphs_population = {{ json_rain_jf | safe}};
+            var layout = { title: 'Rainfall in Jan-Feb from 1984-2018', xaxis: { title: 'Years' }, yaxis: { title: 'mm' } };
+            Plotly.newPlot('rain_jf', graphs_population, layout);
+        </script>
+
+        <div class=" card good ml-3 mr-3 mt-3 float-left " style="width:45%">
+            <div id="rain_ijas">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
         <script>
             var graphs_population = {{ json_rain_ijas | safe}};
-            var layout = {  title: 'Rainfall in June-Sept from 1984-2018', xaxis: { title: 'Years' }, yaxis: { title: 'mm' } };
+            var layout = { title: 'Rainfall in June-Sept from 1984-2018', xaxis: { title: 'Years' }, yaxis: { title: 'mm' } };
             Plotly.newPlot('rain_ijas', graphs_population, layout);
         </script>
     </div>
-    <div class="good" id="rain_mam">
+    <div class="container-fluid  jumbotron clearfix p-5" style="height:70vh">
+        <div class=" card good ml-3 mr-3 mb-3 float-left " style="width:45%">
+            <div id="rain_mam">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
         <script>
             var graphs_population = {{ json_rain_mam | safe}};
-            var layout = {  title: 'Rainfall in Mar-May from 1984-2018', xaxis: { title: 'Years' }, yaxis: { title: 'mm' } };
+            var layout = { title: 'Rainfall in Mar-May from 1984-2018', xaxis: { title: 'Years' }, yaxis: { title: 'mm' } };
             Plotly.newPlot('rain_mam', graphs_population, layout);
         </script>
-    </div>
-    <div class="good" id="rain_ons">
+
+        <div class=" card good ml-3 mr-3 mb-3 float-left " style="width:45%">
+            <div id="rain_ons">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
         <script>
             var graphs_population = {{ json_rain_ons | safe}};
-            var layout = {  title: 'Rainfall in Oct-Dec from 1984-2018', xaxis: { title: 'Years' }, yaxis: { title: 'mm' } };
+            var layout = { title: 'Rainfall in Oct-Dec from 1984-2018', xaxis: { title: 'Years' }, yaxis: { title: 'mm' } };
             Plotly.newPlot('rain_ons', graphs_population, layout);
         </script>
     </div>
 
-    <div class="good" id="produce_rice">
+
+
+    <!-- Production  -->
+    <div class="container-fluid clearfix" style="height:70vh">
+        <div class=" card good m-3 float-left " style="width:45%">
+            <div id="produce_rice">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
         <script>
             var graphs_population = {{ json_produce_rice | safe}};
-            var layout = {  title: 'Rice Production', xaxis: { title: 'Area' }, yaxis: { title: 'kg' } };
+            var layout = { title: 'Rice Production', xaxis: { title: 'Area' }, yaxis: { title: 'kg' } };
             Plotly.newPlot('produce_rice', graphs_population, layout);
         </script>
-    </div>
-    <div class="good" id="produce_cotton">
+
+
+
+
+        <div class=" card good m-3 float-right " style="width:45%">
+            <div id="produce_cotton">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
         <script>
             var graphs_population = {{ json_produce_cotton | safe}};
-            var layout = {  title: 'Cotton Production', xaxis: { title: 'Area' }, yaxis: { title: 'kg' } };
+            var layout = { title: 'Cotton Production', xaxis: { title: 'Area' }, yaxis: { title: 'kg' } };
             Plotly.newPlot('produce_cotton', graphs_population, layout);
         </script>
+
+
+
+
+
+
     </div>
-    <div class="good" id="produce_sugar">
+
+
+    <div class="container-fluid clearfix w-100" style="height:70vh">
+
+        <div class=" card good m-5 float-center d-block " style="width:95%">
+            <div id="produce_sugar">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
         <script>
             var graphs_population = {{ json_produce_sugar | safe}};
-            var layout = {  title: 'Sugarcane Production', xaxis: { title: 'Area' }, yaxis: { title: 'kg' } };
+            var layout = { title: 'Sugarcane Production', xaxis: { title: 'Area' }, yaxis: { title: 'kg' } };
             Plotly.newPlot('produce_sugar', graphs_population, layout);
         </script>
+
     </div>
-
-    
-    
-
 
 
 
 </body>
+
 </html>
