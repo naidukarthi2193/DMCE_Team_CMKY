@@ -207,7 +207,7 @@
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>
         </div>
         <script>
@@ -223,7 +223,7 @@
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>
         </div>
         <script>
@@ -240,7 +240,7 @@
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>
         </div>
         <script>
@@ -256,7 +256,7 @@
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>
         </div>
         <script>
@@ -269,6 +269,33 @@
 
 
     <!-- Production  -->
+    <div class="container-fluid clearfix w-100" style="height:70vh">
+
+        <div class=" card good m-5 float-left d-block " style="width:45%">
+            <div id="produce_sugar">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+        </div>
+        <script>
+            var graphs_population = {{ json_produce_sugar | safe}};
+            var layout = { title: 'Sugarcane Production', xaxis: { title: 'Area' }, yaxis: { title: 'kg' } };
+            Plotly.newPlot('produce_sugar', graphs_population, layout);
+        </script>
+        <div class=" card good m-3 d-block float-left " style="width:45%">
+
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+        </div>
+    </div>
     <div class="container-fluid clearfix" style="height:70vh">
         <div class=" card good m-3 float-left " style="width:45%">
             <div id="produce_rice">
@@ -277,7 +304,7 @@
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>
         </div>
         <script>
@@ -296,7 +323,7 @@
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>
         </div>
         <script>
@@ -313,25 +340,7 @@
     </div>
 
 
-    <div class="container-fluid clearfix w-100" style="height:70vh">
 
-        <div class=" card good m-5 float-center d-block " style="width:95%">
-            <div id="produce_sugar">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-        <script>
-            var graphs_population = {{ json_produce_sugar | safe}};
-            var layout = { title: 'Sugarcane Production', xaxis: { title: 'Area' }, yaxis: { title: 'kg' } };
-            Plotly.newPlot('produce_sugar', graphs_population, layout);
-        </script>
-
-    </div>
 
 
 
